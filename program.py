@@ -18,7 +18,7 @@ class Loop:
         while True:
             status = self.TextReader.Read()
             self.Clicker.Click(status)
-            time.sleep(10)
+            time.sleep(540)
 
 if __name__ == "__main__":
     loop = Loop()
