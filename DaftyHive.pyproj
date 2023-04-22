@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>68fa912d-bc58-44cb-9e8a-b654b505c64f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>DaftyHive.py</StartupFile>
+    <StartupFile>program.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>DaftyHive</Name>
     <RootNamespace>DaftyHive</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,14 +22,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DaftyHive.py" />
+    <Compile Include="Domain\Clicker.py" />
+    <Compile Include="Infrastructure\Handler.py" />
+    <Compile Include="Infrastructure\TextWriter.py" />
     <Compile Include="Infrastructure\TextReader.py" />
-    <Compile Include="Application\Clicker.py" />
     <Compile Include="program.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Domain\" />
     <Folder Include="Infrastructure\" />
-    <Folder Include="Application\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="APIToken.txt" />
+    <Content Include="Infrastructure\APIToken.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
